@@ -34,10 +34,10 @@ def checkCave(cave):
     time.sleep(2)
     friendlyCave = random.randint(1, 2)
 
-    if chosenCave == str(friendlyCave):
+    if cave == str(friendlyCave):
         print('Gives you his treasure!')
     else:
-        print 'Gobbles you down in one bite!'
+        print('Gobbles you down in one bite!')
 
 playAgain = 'yes'
 while playAgain = 'yes' or playAgain = 'y':
