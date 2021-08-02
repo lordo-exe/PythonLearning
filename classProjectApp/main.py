@@ -1,5 +1,5 @@
 import requests
-# Not Done Yet
+# Not done yet
 # Obtaining the ZIP from the user through their manual input
 zipCode = input("Enter a U.S ZIP code for weather results!: ")
 
