@@ -9,11 +9,13 @@ url = "https://api.openweathermap.org/data/2.5/weather?zip=68123," \
       "us&appid=7babd1ea47bae79c9d11902793e59399&units=imperial".format(zipCode)
 
 # Requesting data from 'url' which is our API key weather data
-res = requests.get(url)
-
+try:
+    res = requests.get(url)
+    print("Connection to web service successful")
+except ImportError:
+    print(ImportError)
 # Converting that requested data from 'res' into json through the new variable 'data'
 data = res.json()
-
 
 weatherDesc = data['weather'][0]['description']
 temp = data['main']['temp']
@@ -33,5 +35,6 @@ def print_weather_results():
     print("Temperature feels like:", feelsLike, "°F")
     print("Current humidity:", humidity, "%")
     print("Current pressure:", pressure)
+
 
 print_weather_results()
